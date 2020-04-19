@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../../static/js/style.css" rel="stylesheet">
+	<style>
+		body {
+		  font-family: Arial, Helvetica, sans-serif;
+		  background: url(food.jpg) top center;
+		   background-repeat: no-repeat;
+		  background-size: cover;
+		  margin:0px;
+		}
+
+		#bgColor {
+			background: rgba(6, 12, 34, 0.8);
+		}
+		
+		* {
+		  box-sizing: border-box;
+		}
+
+		/* Add padding to containers */
+		.container {
+		  padding: 16px;
+		  background-color: white;
+		}
+
+		/* Full-width input fields */
+		input[type=text], input[type=password] {
+		  width: 100%;
+		  padding: 15px;
+		  margin: 5px 0 22px 0;
+		  display: inline-block;
+		  border: none;
+		  background: #f1f1f1;
+		}
+
+		input[type=text]:focus, input[type=password]:focus {
+		  background-color: #ddd;
+		  outline: none;
+		}
+
+		/*mobile no.*/
+		input[type="tel"] {
+		  border: 1px solid #ddd;
+		  padding: 4px 8px;
+		}
+		input[type="tel"]:focus {
+		  border: 1px solid #000;
+		}
+
+		input[type="submit"] {
+		  font-weight: bold;
+		  padding: 4px 8px;
+		  border:1px solid #000;
+		  background: #3b5998;
+		  color:#fff;
+		}
+		.widthauto{
+		  width: auto !important;
+		}
+		form {
+		  width: 55%;
+		  margin: 0 auto;
+		}
+
+		.p {
+		  padding-top: 30px;
+		}
+
+		/*address*/
+		input, label {
+		  
+		  margin: 5px 5px;
+		}
+
+		.left {
+		  
+		  right: 0px;
+		  width: 300px;
+		  padding: 10px;
+		}
+
+		.form-group {
+		 
+		  margin: 30px auto;
+		  width: 450px;
+		}
+
+		.form-control {
+
+		  float: left;
+		}
+
+		#inputStreet {
+		  
+		  width: 100%;
+		}
+
+		#inputCity {
+		  width: 50%;
+		}
+
+		#inputState {
+		  width: 15%;
+		}
+
+		#inputZip {
+		  width: 28%;
+		}
+
+		#inputCountry {
+		  width: 50%;
+		}
+		/* Overwrite default styles of hr */
+		hr {
+		  border: 1px solid #f1f1f1;
+		  margin-bottom: 25px;
+		}
+
+		/* Set a style for the submit button */
+		.registerbtn {
+		  background-color: #555555;
+		  color: white;
+		  padding: 16px 20px;
+		  margin: 8px 0;
+		  border: none;
+		  cursor: pointer;
+		  width: 100%;
+		  opacity: 0.9;
+		}
+
+		.registerbtn:hover {
+		  opacity: 1;
+		}
+
+		/* Add a blue text color to links */
+		a {
+		  color: dodgerblue;
+		}
+
+		/* Set a grey background color and center the text of the "sign in" section */
+		.signin {
+		  background-color: #f1f1f1;
+		  text-align: center;
+		}
+		
+		#header {
+		  : 120px;
+		  padding: 30px 200px;
+		  position: static;
+		  display : block;
+		}
+	</style>
+</head>
+
+<body>
+<div id = "bgColor">
+	<header id="header">
+		<div class="container1">
+
+			<div id = "Title">
+			<label id = "logo">TIFFIN FOOD</label>
+			</div>
+
+			<nav id="nav-menu-container">
+			<ul class="nav-menu">
+			    <li><a href="index.html">Home</a></li>
+				<li><a href="login.html">SignIn</a></li>
+				<li class="menu-active"><a href="#">SignUp</a></li>
+				<li><a href="contact.html">Contact</a></li>
+		
+			</ul>
+			</nav><!-- #nav-menu-container -->
+		</div>
+	</header>
+	  
+	<div>
+		<form action="/action_page.php">
+		<div class="container">
+		<h1>Register</h1>
+		<p>Please fill in this form to create an account.</p>
+		<hr>
+		<label for="firstname"><b>Firstname</b></label>
+		<input type="text" placeholder="Enter Firstname" name="Firstname" required class="widthauto">
+		<label for="middlename"><b>Middlename</b></label>
+		<input type="text" placeholder="Enter Middlename" name="Middlename" required class="widthauto">
+		<label for="lastname"><b>Lastname</b></label>
+		<input type="text" placeholder="Enter Lastname" name="Lastname" required class="widthauto">
+		<br>
+
+		<label for="email"><b>Email</b></label>
+		<input type="text" placeholder="Enter Email" name="email" required>
+
+		<label for="psw"><b>Password</b></label>
+		<input type="password" placeholder="Enter Password" name="psw" required>
+
+		<label for="psw-repeat"><b>Confirm Password</b></label>
+		<input type="password" placeholder="Confirm Password" name="psw-repeat" required> 
+		<label for="dob"><b>Date Of Birth</b></label>
+		<input type="date" name="bday" required>
+		<hr>
+		<label for="gender"><b>Gender</b></label><br>
+		<input type="radio" name="gender" value="male" required> Male
+		<input type="radio" name="gender" value="female" required> Female
+		<input type="radio" name="gender" value="other" required> Other
+		<hr>
+		<label for="phonenum"><b>Phone Number (format: xxxx-xxx-xxxx)</b></label><br/>
+		<input id="phonenum" type="tel" pattern="^\d{4}-\d{3}-\d{4}$" required >
+		<hr>
+		<label ><b>Permanent Address</b></label>
+			<div class="left">
+		<input type="street" 
+			 class="form-control" 
+			 id="autocomplete" 
+			 placeholder="Street" required>
+
+		<input type="city" 
+			 class="form-control" 
+			 id="inputCity" 
+			 placeholder="City" required>
+
+		<input type="state" 
+			 class="form-control" 
+			 id="inputState" 
+			 placeholder="State" required>
+
+		<input type="zip" 
+			 class="form-control" 
+			 id="inputZip" 
+			 placeholder="Zip" required>
+
+		<input type="country" 
+			 class="form-control" 
+			 id="inputCountry" 
+			 placeholder="Country" required>
+		</div>
+		<br>
+		</label>
+		  <br><br><br><br><br>
+		<label>
+			<i>Same as above:</i><input type="checkbox" name="permanentpostalcheck" id="permanenpostalcheck"/>
+		</label><br>
+
+		  <br/>
+		<label><b>Corresponding Address</b><br/>
+			<div class="left">
+		<input type="street" 
+			 class="form-control" 
+			 id="autocomplete" 
+			 placeholder="Street">
+
+		<input type="city" 
+			 class="form-control" 
+			 id="inputCity" 
+			 placeholder="City">
+
+		<input type="state" 
+			 class="form-control" 
+			 id="inputState" 
+			 placeholder="State">
+
+		<input type="zip" 
+			 class="form-control" 
+			 id="inputZip" 
+			 placeholder="Zip">
+
+		<input type="country" 
+			 class="form-control" 
+			 id="inputCountry" 
+			 placeholder="Country">
+		</div><br>
+		</label>
+		<br><br><br><br>
+		<hr>
+		<label for="aadhar"><b>Aadhar Number (format: xxxx-xxx-xxxx)</b></label><br>
+		<input id="aadhar" type="tel" pattern="\a{4}-a{4}-a{4}-" required>
+		<hr>
+		<label for="upload-file"><b>Upload a file</b></label><br>
+		<a id="upload-file"></a>
+		<input id="upload-file" type="file" required /> 
+		<hr>
+		<input type="checkbox" required>By creating an account you agree to our <a href="#">Terms & Privacy</a>.
+		<button type="submit" class="registerbtn">Register</button>
+		</div>
+		<div class="container signin">
+		<p>Already have an account? <a href="#">Sign in</a>.</p>
+		</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
