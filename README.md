@@ -1,5 +1,6 @@
 # Tiffin_App
 A simple Food delivery app for the needy people
+
 Objective: Tiffin Food is committed to nurturing a neutral platform and are helping food establishments maintain high standards through Hyperpure amid the Covid-19 outbreak.
 
 Outcome: Tiffin Food will be an Indian local food vendor/donar aggregator and food delivery web application. Tiffin Food provides information regarding what kind and quantity of food the vendor/donar is having, also about the quantity of food the user wants and user-reviews of foods, and also has food delivery options in respective cities.
