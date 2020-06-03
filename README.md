@@ -1,4 +1,4 @@
-# Tiffin_App
+# Food’Ovid: Food for Needy
 A simple Food delivery app for the needy people amid the Covid-19 outbreak.
 
 Objective: Tiffin Food is committed to nurturing a neutral platform and are helping food establishments maintain high standards through Hyperpure amid the Covid-19 outbreak.
